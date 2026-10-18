@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Profile Finder</title>
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- ICONS LINK CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <!-- MAIN -->
+    <main class="container">
+      <header class="app-header">
+        <div class="logo">
+          <i class="fa-brands fa-hithub logo-icon"></i>
+          <span>Profile <b>Finder</b></span>
+        </div>
+        <p class="tagline">Search any Github user,instanlty</p>
+      </header>
+      <!-- SECTION -->
+      <section class="search-box">
+        <div class="input-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input
+            type="text"
+            id="usernameInput"
+            placeholder="Enter Github username e.g:ajaykr35"
+            value="ajaykr35"
+          />
+        </div>
+        <button id="searchBtn" class="search-btn">
+          <span>Search</span>
+        </button>
+      </section>
+      <p class="error-msg hidden">User not found.Try another username</p>
+      <!-- SHIMMER SKELTON LOADER-->
+      <section class="profile-card skeleton hidden" id="skeltonCard">
+        <div class="skeleton-avator shimmer"></div>
+        <div class="skeleton-lines">
+          <div class="shimmer skeleton-line w60"></div>
+          <div class="shimmer skeleton-line w40"></div>
+          <div class="shimmer skeleton-line w80"></div>
+        </div>
+        <!-- SKELETON STATS -->
+        <div class="skeleton-stats">
+          <div class="shimmer skeleton-stat"></div>
+          <div class="shimmer skeleton-stat"></div>
+          <div class="shimmer skeleton-stat"></div>
+        </div>
+      </section>
+      <!-- DUMMY PROFILE CARD -->
+      <section class="profile-card" id="profileCard">
+        <div class="card-top">
+          <img
+            src="https://avatars.githubusercontent.com/u/583231?v=4"
+            id="avatar"
+            class="avatar"
+            alt="User avatar"
+          />
+          <div class="basic-info">
+            <h2 id="fullName">Ajay Kumar</h2>
+            <a
+              href="https://github.com/ajaykr35"
+              class="username"
+              id="username"
+              target="_blank"
+              >@ajaykr35</a
+            >
+            <p class="bio" id="bio">
+              A friendly, shape-shifting mascot who loves open source, cats and
+              clean code.
+            </p>
+          </div>
+        </div>
+        <!-- STATS ROW -->
+        <div class="stats-row">
+          <div class="stat">
+            <span id="repos" class="stat-value">21</span>
+            <span class="stat-label">Repos</span>
+          </div>
+          <div class="stat">
+            <span id="followers" class="stat-value">9.1k</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat">
+            <span id="following" class="stat-value">9</span>
+            <span class="stat-label">Following</span>
+          </div>
+          <div class="stat">
+            <span id="gists" class="stat-value">8</span>
+            <span class="stat-label">Gists</span>
+          </div>
+        </div>
+        <!-- META ROW -->
+        <div class="meta-row">
+          <div class="meta-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="location">West Bengal</span>
+          </div>
+          <div class="meta-item">
+            <i class="fa-solid fa-link"></i>
+            <a id="blog" href="https://github.blog" target="_blank"
+              >github.blog</a
+            >
+          </div>
+          <div class="meta-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Joined <span id="joinDate">Jan 2024</span></span>
+          </div>
+        </div>
+        <a
+          href="https://github.com/octocat"
+          target="_blank"
+          class="profile-btn"
+          id="profileLink"
+          >View Full Profile</a
+        >
+      </section>
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>Built With <i class="fa-solid fa-heart" style="color: red"></i></p>
+      </footer>
+    </main>
+  </body>
+</html>
