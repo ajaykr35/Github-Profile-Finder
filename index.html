@@ -48,9 +48,11 @@
           <span>Search</span>
         </button>
       </section>
-      <p class="error-msg hidden">User not found.Try another username</p>
+      <p class="error-msg hidden" id="errorMsg">
+        User not found.Try another username
+      </p>
       <!-- SHIMMER SKELTON LOADER-->
-      <section class="profile-card skeleton hidden" id="skeltonCard">
+      <section class="profile-card skeleton hidden" id="skeletonCard">
         <div class="skeleton-avator shimmer"></div>
         <div class="skeleton-lines">
           <div class="shimmer skeleton-line w60"></div>
@@ -137,5 +139,6 @@
         <p>Built With <i class="fa-solid fa-heart" style="color: red"></i></p>
       </footer>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
